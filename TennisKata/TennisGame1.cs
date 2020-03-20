@@ -4,8 +4,8 @@
     {
         private int _mScore1;
         private int _mScore2;
-        private string _player1Name;
-        private string _player2Name;
+        private readonly string _player1Name;
+        private readonly string _player2Name;
 
         public TennisGame1(string player1Name, string player2Name)
         {

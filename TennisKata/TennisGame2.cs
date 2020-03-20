@@ -7,8 +7,8 @@
 
         private string _p1Res = "";
         private string _p2Res = "";
-        private string _player1Name;
-        private string _player2Name;
+        private readonly string _player1Name;
+        private readonly string _player2Name;
 
         public TennisGame2(string player1Name, string player2Name)
         {
