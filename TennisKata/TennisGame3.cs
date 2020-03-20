@@ -1,6 +1,5 @@
 ﻿namespace TennisKata
 {
-
     public class TennisGame3 : ITennisGame
     {
         private int _p2;
@@ -19,7 +18,7 @@
             string s;
             if ((_p1 < 4 && _p2 < 4) && (_p1 + _p2 < 6))
             {
-                string[] p = { "Love", "Fifteen", "Thirty", "Forty" };
+                string[] p = {"Love", "Fifteen", "Thirty", "Forty"};
                 s = p[_p1];
                 return (_p1 == _p2) ? s + "-All" : s + "-" + p[_p2];
             }
@@ -37,6 +36,5 @@
             else
                 _p2 += 1;
         }
-
     }
 }

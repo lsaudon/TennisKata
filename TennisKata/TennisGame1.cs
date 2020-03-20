@@ -48,7 +48,12 @@
                 {
                     int tempScore;
                     if (i == 1) tempScore = _mScore1;
-                    else { score += "-"; tempScore = _mScore2; }
+                    else
+                    {
+                        score += "-";
+                        tempScore = _mScore2;
+                    }
+
                     switch (tempScore)
                     {
                         case 0:
@@ -66,6 +71,7 @@
                     }
                 }
             }
+
             return score;
         }
     }
