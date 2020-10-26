@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.3
       
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v1.7.2
       with:
-        dotnet-version: 3.1.200
+        dotnet-version: 3.1.403
     
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -26,7 +26,7 @@ jobs:
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=../coverage/lcov.info
     
     - name: Coverage
-      uses: codecov/codecov-action@v1.0.6
+      uses: codecov/codecov-action@v1.0.14
       with:
         name: Codecov
         token: ${{ secrets.CODECOV_TOKEN }}
